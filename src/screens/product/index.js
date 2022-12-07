@@ -1,10 +1,17 @@
-import {styles} from "./styles"
-import { View, Text } from "react-native"
+import { styles } from "./styles";
+import { View } from "react-native";
+import { PRODUCTS } from "../../constants/data/products";
+import { ProductDetail } from "../../components";
 
-const Product = ()=>{
-    return(
+const Product = ({ navigation, route }) => {
+
+    const { id } = route.params
+
+    const filteredProduct = PRODUCTS.find((product) => product.id === id)
+
+    return (
         <View style={styles.container}>
-            <Text> Product</Text>
+            <ProductDetail item={filteredProduct} />
         </View>
     )
 }

@@ -1,6 +1,5 @@
 
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { Categories, Products, Product } from './screens';
+import { ActivityIndicator,View } from 'react-native';
 import { useFonts } from 'expo-font';
 import {styles} from "./styles"
 import AppNavigator from './navigation';
