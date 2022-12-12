@@ -1,13 +1,18 @@
-import { styles } from "./styles"
-import { View, FlatList, Button, Text } from "react-native"
-import { CATEGORIES } from "../../constants/data/index"
-import { CategoryItem } from "../../components"
+import { styles } from "./styles";
+import { FlatList} from "react-native";
+import { CategoryItem } from "../../components";
+import { useSelector, useDispatch } from "react-redux";
+import {selectCategory} from "../../store/actions"
 
 const Categories = ({ navigation }) => {
 
-    const onSelected = (item) => { 
-        navigation.navigate("Products",{categoryId: item.id, title:item.name})
+    const categories = useSelector((state)=>state.category.categories);
 
+    const dispatch = useDispatch()
+
+    const onSelected = (item) => { 
+        dispatch(selectCategory(item.id))
+        navigation.navigate("Products",{title:item.name})
     }
 
     const renderItem = ({ item }) =>
@@ -15,7 +20,7 @@ const Categories = ({ navigation }) => {
     return (
 
         <FlatList
-            data={CATEGORIES}
+            data={categories}
             renderItem={renderItem}
             keyExtractor={item => item.id.toString()}
             style={styles.container}

@@ -1,0 +1,1 @@
+export const URL_BASE = "https://market-b2d50-default-rtdb.firebaseio.com/";

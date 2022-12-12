@@ -3,6 +3,8 @@ import { ActivityIndicator,View } from 'react-native';
 import { useFonts } from 'expo-font';
 import {styles} from "./styles"
 import AppNavigator from './navigation';
+import { Provider } from 'react-redux';
+import store from "./store"
 
 export default function App() {
 
@@ -17,8 +19,9 @@ export default function App() {
     </View>
   }
   return (
+  <Provider store={store}>
    <AppNavigator/>
-
+   </Provider>  
   );
 }
 
