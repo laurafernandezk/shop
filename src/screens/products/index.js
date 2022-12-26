@@ -2,8 +2,10 @@ import { styles } from "./styles"
 import { View, FlatList } from "react-native"
 import { ProductItem } from "../../components/index"
 import { useSelector, useDispatch } from "react-redux";
-import {filterProducts} from "../../store/actions"
+import {filterProducts, selectProduct } from "../../store/actions"
 import { useEffect } from "react";
+
+
 
 const Products = ({ navigation}) => {
 
@@ -15,11 +17,9 @@ const Products = ({ navigation}) => {
         dispatch(filterProducts(category.id))
     },[])
 
-    
-
     const onSelected = (item) => {
-        navigation.navigate("Product", { id: item.id, title: item.title })
-
+        navigation.navigate("Product", {title: item.title })
+        dispatch(selectProduct(item.id))
     }
 
     const renderItem = ({ item }) => (<ProductItem item={item} onSelected={onSelected} />)

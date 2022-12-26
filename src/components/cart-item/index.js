@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons"
 import { colors } from "../../constants/themes/colors";
 
-const CartItem = ({ onDelete, item }) => {
+const CartItem = ({ item, onDelete }) => {
 
-const { id, description, information, title, price, quantity}= item
+const {  description, information, title, price, quantity, id}= item
 console.warn(item)
     return (<View style={styles.container}>
         <View style={styles.header}>
@@ -18,8 +18,8 @@ console.warn(item)
             <Text style={styles.text}>{information}</Text>
             <Text style={styles.text}>{quantity}</Text>
         </View>
-        <TouchableOpacity onPress={()=>onDelete(id)}>
-            <Ionicons name="trash" size={22} color={colors.textDark} />
+        <TouchableOpacity>
+            <Ionicons name="trash" size={22} color={colors.textDark} onPress={()=>onDelete(id)}/>
         </TouchableOpacity>
         </View>
     </View>)

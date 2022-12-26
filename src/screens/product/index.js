@@ -1,17 +1,20 @@
 import { styles } from "./styles";
 import { View } from "react-native";
-import { PRODUCTS } from "../../constants/data/products";
+import { useSelector, useDispatch } from "react-redux";
 import { ProductDetail } from "../../components";
+import { addToCart } from "../../store/actions";
 
-const Product = ({ navigation, route }) => {
+const Product = ({ navigation}) => {
 
-    const { id } = route.params
-
-    const filteredProduct = PRODUCTS.find((product) => product.id === id)
+    const dispatch = useDispatch()
+    const product = useSelector((state)=>state.products.selected)
+    const onAddToCart =()=>{
+        dispatch(addToCart(product))
+    }
 
     return (
         <View style={styles.container}>
-            <ProductDetail item={filteredProduct} />
+            <ProductDetail item={product} onAddToCart={onAddToCart}/>
         </View>
     )
 }
