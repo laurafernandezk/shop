@@ -40,7 +40,7 @@ export const deleteOrder =(id)=>{
             })  
             const data = await response.json()
             dispatch({
-                type: "DELETE_ORDER",
+                type: DELETE_ORDER,
                 id      
             })
         } catch (error) {
