@@ -8,3 +8,5 @@ export const sumTotal = (items) =>
 
 export const sumItems = (items) =>
   items?.map((item) => item.quantity)?.reduce((a, b) => a + b, 0);
+
+export const getNumber =()=> Math.floor(Math.random() *10000)

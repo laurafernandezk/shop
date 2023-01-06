@@ -1,23 +1,28 @@
 import { styles } from "./style";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 
 const ProductItem = ({ item, onSelected }) => {
 
-    const { title, price, description } = item
+    const { title, price, description, pictureUrl } = item
 
     return (
-        
-            <View style={styles.container}>
-                <TouchableOpacity  style={styles.containerTouchable} onPress={() => onSelected(item)}>
+
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.containerTouchable} onPress={() => onSelected(item)}>
                 <Text style={styles.title}>{title}</Text>
-                <Text style={styles.priceText}>${price}</Text>
-                <Text>{description}</Text>
-                </TouchableOpacity>
-            </View>    
-       
+                <View style={styles.detailContainer}>
+                    <Image style={styles.image} source={pictureUrl} />
+                    <View style={styles.descriptionContainer}>
+                        <Text style={styles.priceText}>$ {price}</Text>
+                        <Text style={styles.text}>{description}</Text>
+                    </View>
+                </View>
+            </TouchableOpacity>
+        </View>
+
 
     )
-   
+
 }
 
 export default ProductItem

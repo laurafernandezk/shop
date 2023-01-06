@@ -1,9 +1,9 @@
-import { orderTypes } from "../types";
 
+import { orderTypes } from "../types";
 const {GET_ORDER, DELETE_ORDER}= orderTypes
 
 const initialState ={
-    list: []
+    list: [],
 }
 
 const orderReducer =(state = initialState, action)=>{
@@ -11,9 +11,9 @@ const orderReducer =(state = initialState, action)=>{
         case GET_ORDER:
             {
                 return{
-                    ...state,
-                    list: action.orders,
-                }
+                        ...state,
+                        list: action.orders
+                    }
             }
         case DELETE_ORDER:
             return{

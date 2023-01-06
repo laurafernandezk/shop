@@ -138,7 +138,7 @@ export const PRODUCTS =[
     price: 8400,
     pictureUrl: require("../../../assets/images/dijeOlas.jpeg"),
     categoryId: 3,
-    stock: 8
+    stock: 0
 },
 
 

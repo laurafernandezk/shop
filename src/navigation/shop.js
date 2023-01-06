@@ -10,8 +10,8 @@ const ShopNavigator = () => {
       initialRouteName="Categories"
       screenOptions={{
         headerStyle: { backgroundColor: colors.backgroundPrimaryDark },
+        headerTitleStyle: {fontFamily: "monserrat-bold"},
         headerTitleAlign: 'center',
-
         headerTintColor: colors.textLight,
         animation: 'slide_from_bottom',
         presentation: 'card',
@@ -26,7 +26,7 @@ const ShopNavigator = () => {
       <Stack.Screen
         name="Product"
         component={Product}
-        options={({ route }) => ({ title: route.params.title, productId: route.params.id })}
+        options={({ route }) => ({ title: route.params.title })}
       />
     </Stack.Navigator>
   );

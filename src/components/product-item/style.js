@@ -4,11 +4,11 @@ import { colors } from "../../constants/themes/colors"
 export const styles =StyleSheet.create({
     container:{
         flex:1,
-        height:200,
-        width:"100%",
+        height:250,
+        width:"95%",
         backgroundColor: colors.backgroundPrimaryDark,
         marginVertical:25,
-        padding:10,
+        padding:15,
         
         shadowColor: "#000",
         shadowOffset: {
@@ -19,21 +19,44 @@ export const styles =StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 6,
+        borderRadius:5,
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    detailContainer:{
+        flexDirection:"row"
+    },
+    descriptionContainer:{
+        width:130,
+        margin:10,
+        justifyContent:"space-around",
+        alignItems:"center"
+
+    },
+    image:{
+        width: 150,
+        height:150,
+        marginLeft:5,
+        marginVertical: 15,
+        borderRadius: 5
     },
     containerTouchable:{
         flex:1,
-        alignItems: "center",
-        justifyContent: "space-around",
+        
     },
-    title:{
-        fontFamily:"monserrat-bold",
-        fontSize: 20
-    },
+   
     title: {
         color: colors.textDark,
         fontSize:20,
-        fontFamily: "monserrat-bold"
+        fontFamily: "monserrat-bold",
+        alignSelf: "center"
     },
+    text:{
+        color: colors.textDark,
+        fontSize:16,
+        fontFamily: "monserrat-regular"
+    },
+
     priceText:{
         color: colors.textDark,
         fontSize:18,

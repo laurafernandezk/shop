@@ -4,6 +4,7 @@ import { ProductItem } from "../../components/index"
 import { useSelector, useDispatch } from "react-redux";
 import {filterProducts, selectProduct } from "../../store/actions"
 import { useEffect } from "react";
+import { getNumber } from "../../utils/functions";
 
 
 
@@ -30,7 +31,7 @@ const Products = ({ navigation}) => {
             style={styles.contentContainer}
             renderItem={renderItem}
             data={filteredProducts}
-            keyExtractor={element => element.title.toString()}
+            keyExtractor={() => getNumber().toString()}
         />
         </View>
     )

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "market",
-    "slug": "market",
+    "name": "Ramp",
+    "slug": "Ramp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.laurafernandezk.Ramp",
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f6efec32-6c1d-4dd6-93d8-461b560cfe0c"
+      }
     }
   }
 }

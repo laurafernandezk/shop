@@ -3,7 +3,8 @@ export const colors ={
     backgroundPrimary: "#F6F6F4",
     backgroundPrimaryDark: "#DADAD2",
     textDark: "#363630",
-    textLight: "#F6F5F4"
+    textLight: "#F6F5F4",
+    disabled: "#8FA39D"
 
     
 }

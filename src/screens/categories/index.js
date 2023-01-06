@@ -3,6 +3,7 @@ import { FlatList} from "react-native";
 import { CategoryItem } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
 import {selectCategory} from "../../store/actions"
+import { getNumber } from "../../utils/functions";
 
 const Categories = ({ navigation }) => {
 
@@ -22,7 +23,7 @@ const Categories = ({ navigation }) => {
         <FlatList
             data={categories}
             renderItem={renderItem}
-            keyExtractor={item => item.id.toString()}
+            keyExtractor={() => getNumber().toString()}
             style={styles.container}
         />
 

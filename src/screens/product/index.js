@@ -8,8 +8,9 @@ const Product = ({ navigation}) => {
 
     const dispatch = useDispatch()
     const product = useSelector((state)=>state.products.selected)
-    const onAddToCart =()=>{
-        dispatch(addToCart(product))
+    const onAddToCart =(quantity)=>{
+        dispatch(addToCart({...product, quantity}))
+        
     }
 
     return (

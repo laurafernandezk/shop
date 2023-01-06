@@ -1,57 +1,81 @@
-
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    container: {
-        marginHorizontal:10,
-        marginVertical: 20,
-        paddingVertical:20,
-        paddingHorizontal:10,
-        justifyContent: "space-around",
-        alignItems: "center",
-        borderRadius: 5,
-        marginHorizontal: 25,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
-        shadowOpacity: 0.27,
-        shadowRadius: 4.65,
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    minHeight:400,
+    maxHeight: 800,
+    width: '85%',
+    marginHorizontal:15,
+    marginVertical: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    borderRadius: 5,
+   
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
 
-        elevation: 6,
-    },
+    elevation: 2,
+  },
 
-    headerContainer: {
-        marginBottom:30
-    },
-    title: {
-        fontFamily:"monserrat-bold",
-        fontSize:20
-    },
-    priceContainer: {
-        marginVertical:20
-    },
-    priceText: {
-        fontFamily:"monserrat-bold",
-        fontSize:16,
-        
-    },
-    
-    image:{
-        height:300,
-        width:350, 
-        resizeMode: "contain",
-        marginHorizontal: 10
-    },
-    detailContainer: {
-        marginBottom:30,
-        justifyContent: "space-around"
-    },
-    detailText: {
-        fontFamily:"monserrat-regular",
-        fontSize:16,
-        marginBottom:7
-    },
+  headerContainer: {
+    margin: 30,
+  },
+  title: {
+    fontFamily: 'monserrat-bold',
+    fontSize: 20,
+  },
+  priceContainer: {
+    marginVertical: 20,
+  },
+  priceText: {
+    fontFamily: 'monserrat-bold',
+    fontSize: 17,
+  },
+ 
+  image: {
+    maxHeight: 300,
+    maxWidth: 300,
+    resizeMode: 'contain',
+    marginHorizontal: 10,
+    paddingHorizontal:10,
+    borderRadius:5
+  },
+  detailContainer: {
+    margin: 10,
+    paddingHorizontal:10,
+    justifyContent: 'space-around',
+    alignItems:"center"
+  },
+  detailText: {
+    fontFamily: 'monserrat-regular',
+    fontSize: 16,
+    marginBottom: 7,
+  },
+  handlerContainer: {
+    flexDirection: 'row',
+    width: 100,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: 100,
+    margin: 10,
+  },
+  handlerText:{
+    fontFamily: 'monserrat-bold',
+    fontSize: 16,
+  },
 
-})
+
+  buttonContainer: {
+    margin: 10,
+  },
+});
